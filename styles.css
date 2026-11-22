@@ -1,0 +1,81 @@
+:root{--red:#d62839;--red-d:#a51c2b;--green:#0f5132;--green-l:#1d7a4c;--cream:#fff8e7;--gold:#f4c542;--ink:#2b1d14;--wood:#7a4a2a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);
+  background:var(--green) radial-gradient(ellipse 120% 900px at 50% 0,#2a8a5a 0,var(--green) 70%) no-repeat;min-height:100vh;line-height:1.5}
+a{color:inherit}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;
+  background-image:radial-gradient(2px 2px at 20px 30px,#fff 50%,transparent 51%),radial-gradient(3px 3px at 120px 80px,#fff 50%,transparent 51%),radial-gradient(2px 2px at 200px 160px,#fff 50%,transparent 51%),radial-gradient(2px 2px at 60px 220px,#fff 50%,transparent 51%);
+  background-size:260px 260px;animation:snow 30s linear infinite}
+@keyframes snow{to{background-position:0 260px}}
+@media (prefers-reduced-motion:reduce){.snow,.lights i{animation:none!important}}
+.topbar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;
+  background:rgba(10,58,36,.85);backdrop-filter:blur(6px);color:var(--cream);border-bottom:3px dashed var(--gold)}
+.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;font-family:"Mountains of Christmas",cursive;font-size:1.6rem;font-weight:700}
+.topbar nav{display:flex;gap:1rem;font-weight:700;font-size:.95rem}
+.topbar nav a{text-decoration:none;opacity:.9}.topbar nav a:hover{color:var(--gold)}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 1rem 2rem}
+.hero{text-align:center;color:var(--cream);padding:2.2rem 0 1.2rem;position:relative}
+.lights{display:flex;justify-content:space-between;margin:0 auto 1.4rem;max-width:520px;border-top:2px solid #0006;padding:0 .5rem}
+.lights i{width:12px;height:18px;border-radius:50%;margin-top:-1px;background:var(--red);box-shadow:0 0 12px var(--red);animation:blink 1.6s infinite alternate}
+.lights i:nth-child(3n+2){background:var(--gold);box-shadow:0 0 12px var(--gold);animation-delay:.4s}
+.lights i:nth-child(3n){background:#5ad1ff;box-shadow:0 0 12px #5ad1ff;animation-delay:.8s}
+@keyframes blink{to{opacity:.35}}
+.avatar-wrap{position:relative;width:200px;height:200px;margin:0 auto}
+.avatar{width:200px;height:200px;border-radius:50%;object-fit:cover;border:7px solid var(--gold);box-shadow:0 0 0 7px var(--red),0 12px 30px #0008}
+.hat-badge{position:absolute;right:-8px;bottom:0;width:64px;height:64px;filter:drop-shadow(0 4px 6px #0007);transform:rotate(12deg)}
+h1{font-family:"Mountains of Christmas",cursive;font-size:clamp(3rem,12vw,4.6rem);line-height:1;margin:1rem 0 .2rem;color:var(--cream);text-shadow:3px 3px 0 var(--red-d),6px 6px 0 #0005}
+.tagline{font-weight:900;color:var(--gold);font-size:1.15rem;margin:.2rem 0}
+.intro{max-width:34rem;margin:.6rem auto;font-size:1.05rem;opacity:.95}
+.handle{display:inline-block;margin:.4rem 0 0;padding:.2rem .8rem;border-radius:99px;background:#0004;font-weight:700;font-size:.95rem}
+.card-section{background:var(--cream);border-radius:22px;padding:1.4rem 1.1rem;margin:1.2rem 0;box-shadow:0 10px 0 var(--wood),0 18px 30px #0006;position:relative;
+  background-image:repeating-linear-gradient(135deg,transparent 0 22px,#d6283908 22px 30px)}
+.card-section::before{content:"";position:absolute;left:16px;right:16px;top:-6px;height:12px;border-radius:6px;
+  background:repeating-linear-gradient(90deg,var(--red) 0 16px,#fff 16px 32px)}
+h2{font-family:"Mountains of Christmas",cursive;font-size:2rem;margin:.2rem 0 .8rem;color:var(--green);text-align:center;line-height:1.1}
+.section-lede{text-align:center;margin:-.3rem auto 1rem;max-width:32rem}
+.links{display:grid;gap:.75rem}
+.btn{display:flex;align-items:center;gap:.9rem;padding:.95rem 1.1rem;border-radius:16px;text-decoration:none;color:#fff;font-size:1.1rem;
+  box-shadow:0 5px 0 #0004;transition:transform .12s,box-shadow .12s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 7px 0 #0004}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #0004}
+.btn svg{width:30px;height:30px;flex:none}
+.btn span{display:flex;flex-direction:column;line-height:1.2}
+.btn small{font-size:.85rem;opacity:.85;font-weight:500}
+.btn-tiktok{background:#111;box-shadow:0 5px 0 #000,-3px 0 0 #25f4ee inset,3px 0 0 #fe2c55 inset}
+.btn-youtube{background:#e62117}
+.btn-instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.btn-tip{background:var(--green-l)}
+.btn .emoji{font-size:1.8rem;width:30px;text-align:center}
+.mini-links{text-align:center;margin:.9rem 0 0;font-size:.9rem;opacity:.8}
+.shop-grid{display:grid;gap:1rem}
+.shop-card{background:#fff;border:2px dashed #d6283955;border-radius:18px;padding:1rem;text-align:center}
+.shop-card h3{margin:.5rem 0 .2rem;font-size:1.2rem;color:var(--red-d)}
+.shop-card p{margin:0 0 .8rem;font-size:.95rem}
+.shop-art{width:84px;height:84px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:1.6rem}
+.shop-art.coin{background:radial-gradient(circle at 35% 30%,#ffe9a0,#d9a520 60%,#9c7210);color:#6b4b07;border:4px double #8a650e;letter-spacing:1px;font-family:Georgia,serif}
+.shop-art.ebay{background:radial-gradient(circle at 35% 30%,#e9f6ff,#9cc9ec);border:4px double #4b8fc4}
+.shop-art.custom{background:radial-gradient(circle at 35% 30%,#ffd6dc,#e8798a);border:4px double var(--red-d)}
+.btn-small{display:inline-block;padding:.55rem 1rem;border-radius:99px;background:var(--red);color:#fff;font-weight:900;text-decoration:none;box-shadow:0 4px 0 var(--red-d)}
+.btn-small:hover{background:var(--red-d)}
+.btn-small.soon{background:#e4dccb;color:#6d5f4a;box-shadow:none;font-weight:700}
+.does{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.does li{background:#fff;border-radius:16px;padding:.9rem .7rem;text-align:center;border:2px solid #0f513222;display:flex;flex-direction:column;align-items:center}
+.does .ico{font-size:2rem;line-height:1}
+.does b{margin:.35rem 0 .1rem;color:var(--green)}
+.does small{font-size:.85rem;opacity:.85}
+.contact{text-align:center}
+.btn-email{display:inline-flex;align-items:center;gap:.5rem;margin:.2rem 0 .4rem;padding:.85rem 1.6rem;border-radius:99px;font-weight:900;font-size:1.1rem;text-decoration:none;color:#fff;
+  background:var(--red);box-shadow:0 5px 0 var(--red-d),0 0 0 4px var(--gold);transition:transform .12s}
+.btn-email:hover,.btn-email:focus-visible{transform:translateY(-2px);background:var(--red-d)}
+.email-fallback{font-weight:700}
+footer{position:relative;z-index:1;text-align:center;color:var(--cream);opacity:.85;padding:1rem 1rem 2rem;font-size:.9rem}
+@media (min-width:720px){
+  .hero{padding-top:3rem}
+  .avatar-wrap,.avatar{width:240px;height:240px}
+  .links{grid-template-columns:1fr 1fr}
+  .shop-grid{grid-template-columns:repeat(3,1fr)}
+  .does{grid-template-columns:repeat(3,1fr)}
+  .card-section{padding:1.8rem 1.6rem}
+}
+@media (max-width:380px){.topbar nav{gap:.6rem;font-size:.85rem}}
