@@ -74,7 +74,7 @@ footer{position:relative;z-index:1;text-align:center;color:var(--cream);opacity:
   .hero{padding-top:3rem}
   .avatar-wrap,.avatar{width:240px;height:240px}
   .links{grid-template-columns:1fr 1fr}
-  .shop-grid{grid-template-columns:repeat(3,1fr)}
+  .shop-grid{grid-template-columns:repeat(2,1fr)}
   .does{grid-template-columns:repeat(3,1fr)}
   .card-section{padding:1.8rem 1.6rem}
 }
